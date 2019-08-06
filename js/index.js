@@ -65,3 +65,30 @@ destinationBtns.forEach((item) => {
         event.stopPropagation();
     })
 });
+
+//greensock boxes
+const contentImgs = document.querySelectorAll(".img-content img");
+contentImgs.forEach(item => {
+    item.addEventListener('load', (event) => {
+        TweenMax.to(event.target, 0.5, {
+            scale: 1,
+            filter: 'grayscale(1) blur(3px)',
+            ease: Power1.easeIn
+        });
+    });
+    item.addEventListener('mouseover', (event) => {
+        TweenMax.to(event.target, 1, {
+            scale: 1.3,
+            filter: 'none',
+            ease: Elastic.easeOut.config(1, 0.75)
+        })
+    });
+    item.addEventListener('mouseleave', (event) => {
+        TweenMax.to(event.target, 0.5, {
+            scale: 1,
+            filter: 'grayscale(1) blur(3px)',
+            ease: Power1.easeIn
+        });
+    });
+})
+console.log(contentImgs);
