@@ -15,3 +15,15 @@ navBar.forEach(item => {
         eventTarget.padding = "0%";
     });
 });
+
+const headerImg = document.querySelector('.intro img');
+headerImg.addEventListener('load', (event) => {
+    const eventTarget = event.target.style;
+    eventTarget.opacity = "0.3";
+});
+headerImg.addEventListener('mouseover', (event) => {
+    const eventTarget = event.target.style;
+    eventTarget.opacity = "1";
+});
+
+console.log();
