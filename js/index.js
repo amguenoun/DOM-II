@@ -26,4 +26,11 @@ headerImg.addEventListener('mouseover', (event) => {
     eventTarget.opacity = "1";
 });
 
+
+headerImg.addEventListener('drag', () => {
+    const eventTarget = event.target.style;
+    eventTarget.transform = "scale(1.2)";
+    eventTarget.margin = "3% 0%";
+})
+
 console.log();
