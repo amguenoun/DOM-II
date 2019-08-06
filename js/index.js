@@ -33,4 +33,10 @@ headerImg.addEventListener('drag', () => {
     eventTarget.margin = "3% 0%";
 })
 
+headerImg.addEventListener('dragend', () => {
+    const eventTarget = event.target.style;
+    eventTarget.transform = "scale(1)";
+    eventTarget.margin = "0% 0%";
+})
+
 console.log();
