@@ -6,4 +6,9 @@ navBar.forEach(item => {
         event.target.style.color = "white";
         event.target.style.padding = "1% 2%";
     });
+    item.addEventListener('mouseleave', (event) => {
+        event.target.style.background = "white";
+        event.target.style.color = "black";
+        event.target.style.padding = "0%";
+    });
 });
