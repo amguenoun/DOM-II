@@ -53,6 +53,7 @@ destinationBtns.forEach((item) => {
     item.addEventListener('contextmenu', (event) => {
         const eventTarget = event.target.style;
         eventTarget.background = 'green';
+        event.stopPropagation();
     })
 });
 console.log();
