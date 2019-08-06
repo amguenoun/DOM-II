@@ -48,5 +48,11 @@ destinationCards.forEach((item) => {
     })
 });
 
-
+const destinationBtns = document.querySelectorAll(".destination .btn");
+destinationBtns.forEach((item) => {
+    item.addEventListener('contextmenu', (event) => {
+        const eventTarget = event.target.style;
+        eventTarget.background = 'green';
+    })
+});
 console.log();
