@@ -2,13 +2,16 @@
 const navBar = document.querySelectorAll('.nav-link');
 navBar.forEach(item => {
     item.addEventListener('mouseenter', (event) => {
-        event.target.style.background = "black";
-        event.target.style.color = "white";
-        event.target.style.padding = "1% 2%";
+        const eventTarget = event.target.style;
+        eventTarget.background = "black";
+        eventTarget.color = "white";
+        eventTarget.padding = "1% 2%";
+
     });
     item.addEventListener('mouseleave', (event) => {
-        event.target.style.background = "white";
-        event.target.style.color = "black";
-        event.target.style.padding = "0%";
+        const eventTarget = event.target.style;
+        eventTarget.background = "white";
+        eventTarget.color = "black";
+        eventTarget.padding = "0%";
     });
 });
