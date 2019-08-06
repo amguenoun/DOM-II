@@ -16,7 +16,7 @@ navBar.forEach(item => {
     });
     item.addEventListener('click', (event) => {
         event.preventDefault();
-    })
+    });
 });
 
 //HeaderImg code
@@ -39,5 +39,14 @@ headerImg.addEventListener('dragend', () => {
     eventTarget.transform = "scale(1)";
     eventTarget.margin = "0% 0%";
 })
+
+const destinationCards = document.querySelectorAll(".destination");
+destinationCards.forEach((item) => {
+    item.addEventListener('dblclick', (event) => {
+        const eventTarget = event.target.style;
+        eventTarget.background = 'red';
+    })
+});
+
 
 console.log();
