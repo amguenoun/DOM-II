@@ -40,6 +40,15 @@ headerImg.addEventListener('dragend', () => {
     eventTarget.margin = "0% 0%";
 })
 
+const headerText = document.querySelector('.intro p');
+headerText.addEventListener('mouseup', (event) => {
+    const eventTarget = event.target.style;
+    eventTarget.color = "white";
+    eventTarget.background = "black";
+    eventTarget.fontSize = "2rem";
+});
+
+//Destination Cards Code
 const destinationCards = document.querySelectorAll(".destination");
 destinationCards.forEach((item) => {
     item.addEventListener('dblclick', (event) => {
@@ -56,4 +65,3 @@ destinationBtns.forEach((item) => {
         event.stopPropagation();
     })
 });
-console.log();
